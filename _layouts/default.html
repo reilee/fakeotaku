@@ -1,20 +1,53 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body id="top">
+<body id="top">
 
-    {% include header.html %}
+  {% include header.html %} {% include nav.html %}
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
+  <div id="contents">
+
+    <div class="inner">
+
+      <div id="main">
+
+        {% include news.html %}
+
+        <section>
+          {{ content }}
+        </section>
+
       </div>
-    </main>
+      <!--/main-->
 
-    {% include footer.html %}
+      {% include sidebar.html %}
 
-  </body>
+      <p id="pagetop"><a href="#">↑</a></p>
+
+      {% include footer.html %}
+    </div>
+    <!--/inner-->
+
+  </div>
+  <!--/contents-->
+
+  <!--スマホ用更新情報　480px以下-->
+  <script type="text/javascript">
+    if (OCwindowWidth() <= 480) {
+      open_close("newinfo_hdr", "newinfo");
+    }
+  </script>
+
+  <!--メニューの３本バー-->
+  <div id="menubar_hdr" class="close"><span></span><span></span><span></span></div>
+  <!--メニューの開閉処理条件設定　480px以下-->
+  <script type="text/javascript">
+    if (OCwindowWidth() <= 480) {
+      open_close("menubar_hdr", "menubar-s");
+    }
+  </script>
+</body>
 
 </html>
