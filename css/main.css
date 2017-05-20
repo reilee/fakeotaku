@@ -1,0 +1,40 @@
+/*ロゴ画像*/
+header #logo {
+  background-image: url("../base/logo.png");
+  background-size: 300px;
+	vertical-align: bottom;
+	width: 300px;	/*ロゴ画像の幅*/
+  height: 120px;
+	position: absolute;
+	left: 0px;	/*header #innerに対して左から0pxの場所に配置*/
+	top: -10px;	/*header #innerに対して上から-10pxの場所に配置。ボックスの影に違和感がないよう上にずらしています。*/
+	-webkit-box-shadow: 2px 2px 8px rgba(0,0,0,0.4);	/*影の設定。左右、上下、広げる幅*、rgbでの色設定。rgbaは左３つの数字が色(0,0,0は黒)で最後の小数点が透明度。*/
+	box-shadow: 2px 2px 8px rgba(0,0,0,0.4);	/*同上*/
+}
+
+header a {
+  text-decoration: none;
+  width: 300px;
+  height: 130px;
+}
+
+#logo_name {
+  top: 18px;
+  display: block;
+  position: relative;
+  font-family: "Hiragino Mincho ProN", "Mincho", "Georgia", serif;
+  font-size: 28pt;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+#logo_tel {
+  display: block;
+  position: relative;
+  bottom: -20px;
+  font-size: 14px;
+  font-weight: lighter;
+  font-family:  "Noto Sans", Arial, Helvetica, sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+}
